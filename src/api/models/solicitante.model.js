@@ -9,11 +9,12 @@ const solicitanteSchema = new Schema({
     username: { type: String, require: true },
     age: { type: Number },
     image: { type: String, default: "" },
+    inscrito: [{ type: Schema.ObjectId, ref: "oferta" }]
 }, {
 
     collection: "solicitante"
 });
 //string, number, array, date, mixed, boolean,  ObjectId
 
-const Solicitante = mongoose.model("student", solicitanteSchema)
+const Solicitante = mongoose.model("solicitante", solicitanteSchema)
 module.exports = Solicitante;

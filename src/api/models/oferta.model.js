@@ -10,7 +10,7 @@ const ofertaSchema = new Schema({
     inscritos: [{ type: Schema.ObjectId, ref: "user" }],
     salario: {type: String, require: true},
     fecha: {type: String, require:true},
-    activa: {type: Boolean, require:true}
+    active: {type: Boolean, require:true}
 }, {
 
     collection: "oferta"

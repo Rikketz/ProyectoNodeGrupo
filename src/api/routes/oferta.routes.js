@@ -3,9 +3,9 @@ const router = express.Router();
 
 const { addOferta, getOfertas, getOfertaById, putOferta } = require("../controllers/oferta.controller")
 
-router.put("/:id", putOferta)
 router.post("/", addOferta)
 router.get("/", getOfertas)
 router.get("/:id", getOfertaById)
+router.put("/id:", putOferta)
 
 module.exports = router;

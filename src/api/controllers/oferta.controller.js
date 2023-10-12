@@ -5,7 +5,6 @@ const addOferta = async (req, res) => {
     try {
         const newOferta = new Oferta(req.body);
         const createdOferta = await newOferta.save();
-
         return res.status(200).json({ message: "proyecto creado", data: createdOferta })
 
     } catch (error) {
@@ -16,16 +15,16 @@ const addOferta = async (req, res) => {
 const getOfertas = async (req, res) => {
     try {
 
-        const ofertas = await Oferta.find().populate("solicitante")
+        const ofertas = await Oferta.find()  //.populate("oferta")
         return res.status(200).json(ofertas)
     } catch (error) {
-
+        return res.json(error)
     }
 }
 
 const getOfertaById = async (req, res) => {
     try {
-        const oferta = await Oferta.findById(req.params.id).populate("solicitante");
+        const oferta = await Oferta.findById(req.params.id)  //.populate("oferta");
         return res.status(200).json(oferta)
     } catch (error) {
 

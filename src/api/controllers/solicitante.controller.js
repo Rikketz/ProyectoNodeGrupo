@@ -1,3 +1,4 @@
+
 const Solicitante = require("../models/solicitante.model");
 
 const newSolicitante = async (req, res) => {
@@ -14,15 +15,18 @@ const newSolicitante = async (req, res) => {
         return res.json(error)
     }
 }
+
 const getSolicitante = async (req, res) => {
     try {
         const solicitantes = await Solicitante.find();
         return res.status(200).json(solicitantes)
 
+
     } catch (error) {
         return res.json(error)
     }
 }
+
 const updateSolicitante = async (req, res) => {
     try {
         const { id } = req.params;
@@ -52,13 +56,17 @@ const deleteSolicitante = async (req, res) => {
 }
 
 
+
 const getSolicitantebyName = async (req, res) => {
     try {
         const { nameSolicitante } = req.params;
         const solicitantes = await Solicitante.find({ name: nameSolicitante });
         return res.status(200).json(solicitantes)
+
     } catch {
         return res.json(error)
     }
 }
+
 module.exports = { newSolicitante, getSolicitante, updateSolicitante, deleteSolicitante, getSolicitantebyName }
+

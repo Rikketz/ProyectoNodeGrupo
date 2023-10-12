@@ -1,33 +1,38 @@
-const Project = require("../models/oferta.model")
 
-const addProject = async (req, res) => {
+const Oferta = require("../models/oferta.model")
+
+const addOferta = async (req, res) => {
     try {
-        const newProject = new Project(req.body);
-        const createdProject = await newProject.save();
+        const newOferta = new Oferta(req.body);
+        const createdOferta = await newOferta.save();
 
-        return res.status(200).json({ message: "proyecto creado", data: createdProject })
+        return res.status(200).json({ message: "proyecto creado", data: createdOferta })
 
     } catch (error) {
 
     }
 }
-const getProjects = async (req, res) => {
+
+const getOfertas = async (req, res) => {
     try {
 
-        const projects = await Project.find().populate("student")
-        return res.status(200).json(projects)
+        const ofertas = await Oferta.find().populate("student")
+        return res.status(200).json(ofertas)
     } catch (error) {
 
     }
 }
-const getProjectById = async (req, res) => {
+
+const getOfertaById = async (req, res) => {
     try {
-        const project = await Project.findById(req.params.id).populate("student");
-        //const project = await Project.find({ _id: req.params.id }).populate("student");
-        return res.status(200).json(project)
+        const oferta = await Oferta.findById(req.params.id).populate("student");
+        //const oferta = await Oferta.find({ _id: req.params.id }).populate("student");
+        return res.status(200).json(oferta)
     } catch (error) {
 
     }
 
 }
-module.exports = { addProject, getProjects, getProjectById }
+
+module.exports = { addOferta, getOfertas, getOfertaById }
+

@@ -46,6 +46,7 @@ const profile = async (req, res) => {
     } catch (error) {
     }
 };
+
 const getUser = async (req, res) => {
     try {
 
@@ -54,17 +55,49 @@ const getUser = async (req, res) => {
     } catch (error) {
         return res.json(error)
     }
-}
+};
+
+const putUser = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const putUser = new User(req.body);
+        putUser._id = id;
+        const updatedUser = await User.findByIdAndUpdate(id, putUser, {
+            new: true,
+        });
+        return res.status(200).json(updatedUser)
+    } catch (error) {
+        return res.json(error)
+    }
+};
 
 const getUserById = async (req, res) => {
     try {
-        const oferta = await User.findById(req.params.id)  //.populate("oferta");
-        return res.status(200).json(oferta)
+        const user = await User.findById(req.params.id)  //.populate("oferta");
+        return res.status(200).json(user)
     } catch (error) {
-
+        return res.json(error)
     }
+};
 
+const getUserByEmail = async(req, res)=>{
+    try {
+        const userEmail = await User.findByEmail(req.params.email);
+        return res.status(200).json(userEmail)
+    } catch (error) {
+        
+    }
+}
+
+const deleteUser = async(req,res) => {
+    try {
+        const {id} = req.params;
+        const deleteUser = await User.findByIdAndDelete(id);
+        return res.status(200).json(deleteUser)
+    } catch (error) {
+        return res.status(500).json(error)
+    }
 }
 
 
-module.exports = { register, login, profile, getUserById, getUser }
+module.exports = { register, login, profile, getUserById, getUser, putUser, getUserByEmail, deleteUser }

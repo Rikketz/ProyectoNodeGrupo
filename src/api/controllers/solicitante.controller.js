@@ -1,50 +1,54 @@
-const Student = require("../models/student.model");
 
-const newStudent = async (req, res) => {
+const Solicitante = require("../models/solicitante.model");
+
+const newSolicitante = async (req, res) => {
     try {
         const body = req.body;
-        const student = new Student(body);
+        const solicitante = new Solicitante(body);
 
         if (req.file.path) {
-            student.image = req.file.path;
+            solicitante.image = req.file.path;
         }
-        const createdStudent = await student.save();
-        return res.json(createdStudent)
+        const createdSolicitante = await solicitante.save();
+        return res.json(createdSolicitante)
     } catch (error) {
         return res.json(error)
     }
 }
-const getStudent = async (req, res) => {
+
+const getSolicitante = async (req, res) => {
     try {
-        const students = await Student.find();
-        return res.status(200).json(students)
+        const solicitantes = await Solicitante.find();
+        return res.status(200).json(solicitantes)
+
 
     } catch (error) {
         return res.json(error)
     }
 }
-const updateStudent = async (req, res) => {
+
+const updateSolicitante = async (req, res) => {
     try {
         const { id } = req.params;
-        const studentBody = new Student(req.body);
-        studentBody._id = id;
-        const updateStudent = await Student.findByIdAndUpdate(id, studentBody, { new: true });
-        if (!updateStudent) {
-            return res.status(404).json({ message: "estudiante no existe" })
+        const solicitanteBody = new solicitante(req.body);
+        solicitanteBody._id = id;
+        const updateSolicitante = await Solicitante.findByIdAndUpdate(id, solicitanteBody, { new: true });
+        if (!updateSolicitante) {
+            return res.status(404).json({ message: "solicitante no existe" })
         }
-        return res.status(200).json(updateStudent)
+        return res.status(200).json(updateSolicitante)
     } catch (error) {
 
     }
 }
-const deleteStudent = async (req, res) => {
+const deleteSolicitante = async (req, res) => {
     try {
         const { id } = req.params;
-        const deleteStudent = await Student.findByIdAndDelete(id);
-        if (!deleteStudent) {
+        const deleteSolicitante = await Solicitante.findByIdAndDelete(id);
+        if (!deleteSolicitante) {
             return res.status(404).json({ message: "estudiante no existe" })
         }
-        return res.status(200).json(deleteStudent)
+        return res.status(200).json(deleteSolicitante)
 
     } catch (error) {
 
@@ -52,13 +56,17 @@ const deleteStudent = async (req, res) => {
 }
 
 
-const getStudentbyName = async (req, res) => {
+
+const getSolicitantebyName = async (req, res) => {
     try {
-        const { nameStudent } = req.params;
-        const students = await Student.find({ name: nameStudent });
-        return res.status(200).json(students)
+        const { nameSolicitante } = req.params;
+        const solicitantes = await Solicitante.find({ name: nameSolicitante });
+        return res.status(200).json(solicitantes)
+
     } catch {
         return res.json(error)
     }
 }
-module.exports = { newStudent, getStudent, updateStudent, deleteStudent, getStudentbyName }
+
+module.exports = { newSolicitante, getSolicitante, updateSolicitante, deleteSolicitante, getSolicitantebyName }
+

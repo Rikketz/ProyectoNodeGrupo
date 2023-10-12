@@ -1,8 +1,10 @@
 {
-  "name": "clase-1",
+
+  "name": "proyecto-grupo",
   "version": "1.0.0",
   "description": "proyecto",
-  "main": "main.js",
+  "main": "index.js",
+
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",

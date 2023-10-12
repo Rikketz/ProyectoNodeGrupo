@@ -1,3 +1,4 @@
+
 const Oferta = require("../models/oferta.model")
 
 const addOferta = async (req, res) => {
@@ -11,6 +12,7 @@ const addOferta = async (req, res) => {
 
     }
 }
+
 const getOfertas = async (req, res) => {
     try {
 
@@ -20,6 +22,7 @@ const getOfertas = async (req, res) => {
 
     }
 }
+
 const getOfertaById = async (req, res) => {
     try {
         const oferta = await Oferta.findById(req.params.id).populate("student");
@@ -30,4 +33,6 @@ const getOfertaById = async (req, res) => {
     }
 
 }
+
 module.exports = { addOferta, getOfertas, getOfertaById }
+

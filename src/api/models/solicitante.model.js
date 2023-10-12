@@ -3,15 +3,17 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 
-const studentSchema = new Schema({
+const solicitanteSchema = new Schema({
+
     name: { type: String, require: true },
     username: { type: String, require: true },
     age: { type: Number },
     image: { type: String, default: "" },
 }, {
-    collection: "student"
+
+    collection: "solicitante"
 });
 //string, number, array, date, mixed, boolean,  ObjectId
 
-const Student = mongoose.model("student", studentSchema)
-module.exports = Student;
+const Solicitante = mongoose.model("student", solicitanteSchema)
+module.exports = Solicitante;

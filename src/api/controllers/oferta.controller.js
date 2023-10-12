@@ -15,7 +15,6 @@ const addOferta = async (req, res) => {
 
 const getOfertas = async (req, res) => {
     try {
-
         const ofertas = await Oferta.find().populate("solicitante")
         return res.status(200).json(ofertas)
     } catch (error) {

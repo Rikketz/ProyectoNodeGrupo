@@ -14,7 +14,7 @@ const addOferta = async (req, res) => {
 
 const getOfertas = async (req, res) => {
     try {
-        const ofertas = await Oferta.find()  //.populate("oferta")
+        const ofertas = await Oferta.find().populate("inscritos")
         return res.status(200).json(ofertas)
     } catch (error) {
         return res.json(error)
@@ -23,7 +23,7 @@ const getOfertas = async (req, res) => {
 
 const getOfertaById = async (req, res) => {
     try {
-        const oferta = await Oferta.findById(req.params.id)  //.populate("oferta");
+        const oferta = await Oferta.findById(req.params.id).populate("inscritos");
         return res.status(200).json(oferta)
     } catch (error) {
 
@@ -31,5 +31,20 @@ const getOfertaById = async (req, res) => {
 
 }
 
-module.exports = { addOferta, getOfertas, getOfertaById }
+const putOferta = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const putOferta = new Oferta(req.body);
+        putOferta._id = id;
+        const updatedOferta = await Oferta.findByIdAndUpdate(id, putOferta, {
+            new:true,
+        })
+        return res.status(200).json(updatedOferta);
+    } catch (error) {
+        return res.status(500).json(error)
+    }
+
+}
+
+module.exports = { addOferta, getOfertas, getOfertaById, putOferta }
 

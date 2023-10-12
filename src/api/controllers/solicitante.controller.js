@@ -46,7 +46,7 @@ const deleteSolicitante = async (req, res) => {
         const { id } = req.params;
         const deleteSolicitante = await Solicitante.findByIdAndDelete(id);
         if (!deleteSolicitante) {
-            return res.status(404).json({ message: "estudiante no existe" })
+            return res.status(404).json({ message: "solicitante no existe" })
         }
         return res.status(200).json(deleteSolicitante)
 
@@ -54,8 +54,6 @@ const deleteSolicitante = async (req, res) => {
 
     }
 }
-
-
 
 const getSolicitantebyName = async (req, res) => {
     try {

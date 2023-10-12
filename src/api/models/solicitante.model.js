@@ -15,5 +15,5 @@ const solicitanteSchema = new Schema({
 });
 //string, number, array, date, mixed, boolean,  ObjectId
 
-const Solicitante = mongoose.model("student", solicitanteSchema)
+const Solicitante = mongoose.model("solicitante", solicitanteSchema)
 module.exports = Solicitante;

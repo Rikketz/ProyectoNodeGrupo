@@ -51,6 +51,16 @@ const profile = async (req, res) => {
     }
 }
 
+const getUser = async (req, res) => {
+    try {
+
+        const user = await User.find()  //.populate("oferta")
+        return res.status(200).json(user)
+    } catch (error) {
+        return res.json(error)
+    }
+}
 
 
-module.exports = { register, login, profile }
+
+module.exports = { register, login, profile, getUser }

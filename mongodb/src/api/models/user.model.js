@@ -4,12 +4,13 @@ const Schema = mongoose.Schema;
 
 
 const userSchema = new Schema({
+    user: {type: String, required: true},
     email: { type: String, required: true },
     password: { type: String, required: true },
-    role: { type: String, default: "user", enum: ["admin", "user"] },
+    role: { type: String, default: "user", enum: ["admin", "user", "company"] },
 
 }, {
-    collection: "user"
+    collection: "user", timestamps: true
 });
 //string, number, array, date, mixed, boolean,  ObjectId
 

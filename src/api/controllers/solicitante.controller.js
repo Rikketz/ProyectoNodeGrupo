@@ -5,7 +5,6 @@ const newSolicitante = async (req, res) => {
     try {
         const body = req.body;
         const solicitante = new Solicitante(body);
-
         if (req.file.path) {
             solicitante.image = req.file.path;
         }
@@ -19,8 +18,7 @@ const newSolicitante = async (req, res) => {
 const getSolicitante = async (req, res) => {
     try {
         const solicitantes = await Solicitante.find();
-        return res.status(200).json(solicitantes)
-
+        return res.status(200).json(solicitantes);
 
     } catch (error) {
         return res.json(error)

@@ -54,13 +54,23 @@ const profile = async (req, res) => {
 const getUser = async (req, res) => {
     try {
 
-        const user = await User.find()  //.populate("oferta")
+        const user = await User.find()
         return res.status(200).json(user)
     } catch (error) {
         return res.json(error)
     }
 }
 
+const getUserById = async (req, res) => {
+    try {
+        const oferta = await User.findById(req.params.id)  //.populate("oferta");
+        return res.status(200).json(oferta)
+    } catch (error) {
+
+    }
+
+}
 
 
-module.exports = { register, login, profile, getUser }
+
+module.exports = { register, login, profile, getUser, getUserById }

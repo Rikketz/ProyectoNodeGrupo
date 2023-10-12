@@ -6,7 +6,6 @@ const { generateToken } = require("../../utils/jwt");
 
 const register = async (req, res) => {
     try {
-
         const userBody = new User(req.body)
         const valEmail = await validateEmailDB(req.body.email)
         if (!valEmail) {
@@ -39,18 +38,33 @@ const login = async (req, res) => {
         return res.json({ success: true, message: "login realizado", token: token, userInfo: userDB })
 
     } catch (error) {
-
-    }
-
+    };
 }
 const profile = async (req, res) => {
     try {
         return res.status(200).json(req.userProfile)
     } catch (error) {
+    }
+};
+const getUser = async (req, res) => {
+    try {
 
+        const user = await User.find()
+        return res.status(200).json(user)
+    } catch (error) {
+        return res.json(error)
     }
 }
 
+const getUserById = async (req, res) => {
+    try {
+        const oferta = await User.findById(req.params.id)  //.populate("oferta");
+        return res.status(200).json(oferta)
+    } catch (error) {
+
+    }
+
+}
 
 
-module.exports = { register, login, profile }
+module.exports = { register, login, profile, getUserById, getUser }

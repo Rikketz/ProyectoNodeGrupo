@@ -23,7 +23,7 @@ app.use("/student", routerStudent);
 app.use("/project", routerProject);
 app.use("/user", routesUser)
 
-const PORT = 5051;
+const PORT = 5000;
 app.listen(PORT, () => {
   console.log('escuchando por el puerto ' + PORT);
 });

@@ -7,7 +7,9 @@ const ofertaSchema = new Schema({
 
     name: { type: String, require: true },
     description: { type: String, require: true },
-    oferta: [{ type: Schema.ObjectId, ref: "oferta" }]
+    inscritos: [{ type: Schema.ObjectId, ref: "user" }],
+    salario: {type: String, require: true},
+    fecha: {type: String, require:true}
 }, {
 
     collection: "oferta"

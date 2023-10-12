@@ -1,6 +1,5 @@
 const express = require('express');
 const { connectDb } = require("./src/utils/database");
-const routerSolicitante = require("./src/api/routes/solicitante.routes");
 const routerOferta = require("./src/api/routes/oferta.routes");
 const routesUser = require("./src/api/routes/user.routes")
 const env = require("dotenv")
@@ -19,7 +18,6 @@ cloudinary.config({
 
 connectDb();
 
-app.use("/solicitante", routerSolicitante);
 app.use("/oferta", routerOferta);
 app.use("/user", routesUser)
 

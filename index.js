@@ -1,7 +1,7 @@
 const express = require('express');
 const { connectDb } = require("./src/utils/database");
-const routerStudent = require("./src/api/routes/student.routes");
-const routerProject = require("./src/api/routes/project.routes");
+const routerSolicitante = require("./src/api/routes/solicitante.routes");
+const routerOferta = require("./src/api/routes/oferta.routes");
 const routesUser = require("./src/api/routes/user.routes")
 const env = require("dotenv")
 env.config()
@@ -19,8 +19,8 @@ cloudinary.config({
 
 connectDb();
 
-app.use("/student", routerStudent);
-app.use("/project", routerProject);
+app.use("/solicitante", routerSolicitante);
+app.use("/oferta", routerOferta);
 app.use("/user", routesUser)
 
 const PORT = 5051;

@@ -6,21 +6,21 @@ const { generateToken } = require("../../utils/jwt");
 
 const register = async (req, res) => {
     try {
-        const userBody = new User(req.body)
+        const userBody = new User (req.body);
         const valEmail = await validateEmailDB(req.body.email)
-        if (!valEmail) {
-            if (validatePassword(req.body.password)) {
+        if(!valEmail){  //PUEDO EJECUTA RLA FUNCION DIRECTAMENTE EN EL IF
+            if(validatePassword(req.body.password)){
                 userBody.password = bycrypt.hashSync(userBody.password, 10)
-                const createduser = await userBody.save();
-                return res.json({ success: true, message: "Agregado con exito", data: createduser })
+        const createdUser = await userBody.save();
+        console.log(res);
+        return res.json({succes: true, message : "Agregado con exito!", data: createdUser})
             } else {
-                return res.json({ success: false, message: "La contraseña no cumple con el patron" })
+                return res.json({succes: false, message : "La contraseña no cumple los requisitos"})
             }
-        }
-        return res.json({ success: false, message: "Email ya existe" })
-
+    }
+    return res.json({message : "Email ya existe"})
     } catch (error) {
-
+        return res.json(error);
     }
 }
 const login = async (req, res) => {

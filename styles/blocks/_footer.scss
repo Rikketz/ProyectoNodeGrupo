@@ -1,0 +1,23 @@
+footer{
+    height: 70px;
+    width: 100%;
+    background-color: rgb(38, 111, 156);
+}
+.footerDivs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+}
+.ulFooter{
+    display: flex;
+    color: white;
+    align-items: center;
+}
+.listaFooter{
+    margin: 20px;
+    cursor: pointer;
+}
+.listaFooter:hover{
+    text-decoration: underline;
+}

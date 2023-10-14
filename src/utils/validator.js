@@ -11,7 +11,7 @@ const validateEmailDB = async (emailUser) => {
         const validateEmail = await User.findOne({ email: emailUser })
         return validateEmail;
     } catch (error) {
-        console.log(error)
+
     }
 
 }

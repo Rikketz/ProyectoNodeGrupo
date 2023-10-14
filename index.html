@@ -21,9 +21,9 @@
                 <p class="buscaOfertas">Buscar ofertas</p>
             </div>
             <div class="navDerecha">
-                <p class="inicioSesion">
+                <span id="inicioSesion">
                     Iniciar Sesión
-                </p>
+                </span>
                 <p class="publicaEmpleo">
                     Publicar Empleo
                 </p>
@@ -31,6 +31,19 @@
         </nav>
     </header>
     <main>
+        <div>
+            <dialog id="modal">
+                <form method="dialog">
+                    <label>
+                        EMAIL<input type="email" class="email">
+                    </label>
+                    <label>
+                        PASSWORD<input type="password" class="password">
+                    </label>
+                    <button id="btn__inicio">Iniciar Sesión</button>
+                </form>
+            </dialog>
+        </div>
         <h1 class="title"></h1>
         <section class="secOfertas">
         </section>

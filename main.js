@@ -1,5 +1,6 @@
 const secOfertas = document.querySelector('.secOfertas');
 
+
 const getOfertas = async () => {
     const response = await fetch(`http://localhost:5000/oferta/`);
     const ofertas = await response.json();
@@ -27,8 +28,7 @@ const drawOfertas = (mappedOfertas) => {
         divOferta.className = 'boxOferta'
         secOfertas.appendChild(divOferta);
     };
-}
-
+};
 
 const init = async () => {
     const ofertas = await getOfertas();

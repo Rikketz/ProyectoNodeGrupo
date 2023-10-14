@@ -1,0 +1,36 @@
+main{
+    width: 100vw;
+    height: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+};
+
+.secOfertas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boxOferta{
+    width: 20%;
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 10%;
+    border-color: black;
+    border-style: inset;
+};
+
+.boxOferta h1{
+    padding: 10px;
+};
+
+.boxOferta h3{
+    padding: 10px;
+};
+
+.boxOferta p{
+    padding: 10px;
+};
+
+.boxOferta h4{
+    padding: 10px;
+}

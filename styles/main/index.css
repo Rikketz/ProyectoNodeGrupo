@@ -1,7 +1,42 @@
-@media only screen and (max-device-width: 844px) {
-  * {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+main {
+  width: 100vw;
+  height: auto;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.secOfertas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.boxOferta {
+  width: 20%;
+  padding: 30px;
+  margin-top: 30px;
+  border-radius: 10%;
+  border-color: black;
+  border-style: inset;
+}
+
+.boxOferta h1 {
+  padding: 10px;
+}
+
+.boxOferta h3 {
+  padding: 10px;
+}
+
+.boxOferta p {
+  padding: 10px;
+}
+
+.boxOferta h4 {
+  padding: 10px;
 }/*# sourceMappingURL=index.css.map */

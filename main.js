@@ -29,6 +29,31 @@ const drawOfertas = (mappedOfertas) => {
     };
 }
 
+document.getElementById("registerNewUser").addEventListener('submit', async (e) =>{
+    e.preventDefault();
+    
+    const name = document.getElementById("name").value;
+    const lastname = document.getElementById("lastname").value;
+    const phone = document.getElementById("phone").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    
+    const response = await fetch("http://localhost:5000/user/register", {
+        method: 'POST',
+        headers:{
+            'Content-Type':'application/json',
+        },
+        body: JSON.stringify({name, lastname, phone, email, password}),
+    });
+    
+    const data = await response.json();
+    document.getElementById('mensajeRegistroCorrecto').textContent=data.message;
+})
+
+
+
+
+
 
 const init = async () => {
     const ofertas = await getOfertas();

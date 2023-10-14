@@ -21,7 +21,7 @@ const drawOfertas = (mappedOfertas) => {
         divOferta.innerHTML = `<h1>${oferta.name}</h1>
         <h3>Descripción:</h3>
         <p>${oferta.description}</p>
-        <h4>Salario:</h4><p> ${oferta.salario}</p>
+        <h4>Salario:</h4><span> ${oferta.salario}</span>
         <h4>Número de inscritos:</h4><p>${oferta.inscritos.length}</p>
         `
         divOferta.className = 'boxOferta'

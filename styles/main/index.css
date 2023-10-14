@@ -68,6 +68,56 @@
   text-decoration: underline;
 }
 
+
+main {
+  width: 100%;
+  height: auto;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.login {
+  width: 15%;
+}
+
+.secOfertas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.boxOferta {
+  width: 800px;
+  height: 370px;
+  padding: 30px;
+  margin-top: 30px;
+  border-radius: 10%;
+  border-color: black;
+  background-color: aliceblue;
+  border-style: inset;
+}
+
+.boxOferta h1 {
+  padding: 10px;
+  text-decoration: underline;
+}
+
+.boxOferta h3 {
+  padding: 10px;
+}
+
+.boxOferta p {
+  padding: 10px;
+}
+
+.boxOferta span {
+  padding: 10px;
+  background-color: beige;
+  border-radius: 5%;
+}
+
+.boxOferta h4 {
+  padding: 10px;
+
 footer {
   height: 70px;
   width: 100%;
@@ -94,4 +144,5 @@ footer {
 
 .listaFooter:hover {
   text-decoration: underline;
+
 }/*# sourceMappingURL=index.css.map */

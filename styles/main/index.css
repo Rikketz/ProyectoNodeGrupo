@@ -68,7 +68,6 @@
   text-decoration: underline;
 }
 
-
 main {
   width: 100%;
   height: auto;
@@ -117,6 +116,7 @@ main {
 
 .boxOferta h4 {
   padding: 10px;
+}
 
 footer {
   height: 70px;
@@ -144,5 +144,4 @@ footer {
 
 .listaFooter:hover {
   text-decoration: underline;
-
 }/*# sourceMappingURL=index.css.map */

@@ -28,8 +28,17 @@ const drawOfertas = (mappedOfertas) => {
         divOferta.className = 'boxOferta'
         secOfertas.appendChild(divOferta);
     };
+};
 
+const init = async () => {
+    const ofertas = await getOfertas();
+    // console.log(ofertas)
+    const mappedOfertas = mapOfertas(ofertas);
+
+    drawOfertas(mappedOfertas)
 }
+
+init()
 
 document.getElementById("registerNewUser").addEventListener('submit', async (e) =>{
     e.preventDefault();
@@ -52,12 +61,4 @@ document.getElementById("registerNewUser").addEventListener('submit', async (e) 
     document.getElementById('mensajeRegistroCorrecto').textContent=data.message;
 })
 
-const init = async () => {
-    const ofertas = await getOfertas();
-    // console.log(ofertas)
-    const mappedOfertas = mapOfertas(ofertas);
 
-    drawOfertas(mappedOfertas)
-}
-
-init()

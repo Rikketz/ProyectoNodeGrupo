@@ -36,7 +36,6 @@ const login = async (req, res) => {
         //generar el token
         const token = generateToken(userDB._id, userDB.email);
         return res.json({ success: true, message: "login realizado", token: token, userInfo: userDB })
-
     } catch (error) {
     };
 }

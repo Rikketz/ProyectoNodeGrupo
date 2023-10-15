@@ -5,12 +5,12 @@ const Schema = mongoose.Schema;
 
 const ofertaSchema = new Schema({
 
-    name: { type: String, require: true },
-    description: { type: String, require: true },
+    name: { type: String, required: true },
+    description: { type: String, required: true },
     inscritos: [{ type: Schema.ObjectId, ref: "user" }],
-    salario: {type: String, require: true},
-    fecha: {type: String, require:true},
-    active: {type: Boolean, require:true}
+    salary: {type: String, required: true},
+    date: {type: String, required:true},
+    active: {type: Boolean, default:false}
 }, {
 
     collection: "oferta"

@@ -13,7 +13,7 @@
         <nav class="nav navbar-expand-lg bg-body-tertiary">
             <div class="navIzquierda">
                 <div class="fotoLogo">
-                    <img class="janosusLogo" src="./styles/base/assets/janosusLogo.png" alt="">
+                    <a href="./index.html"><img class="janosusLogo" src="./styles/base/assets/janosusLogo.png" alt=""></a>
                 </div>
                 <p class="buscaOfertas">Buscar ofertas</p>
             </div>
@@ -21,14 +21,25 @@
                 <p class="inicioSesion">
                     Iniciar Sesión
                 </p>
-                <p class="publicaEmpleo">
-                    Publicar Empleo
+                <p class="inicioSesion">
+                    <a href="./register.html">Regístrate</a>
                 </p>
+                <p class="publicaEmpleo">
+                    <a href="./publishEmploy.html">Publicar Empleo</a>
+                </p>
+                <dialog id="modalPublicarEmpleo">
+                    <div class="modalPublicarEmpleo-contenido">
+                        <span id="cerrarModal" class="cerrarPublicarEmpleo">&times;</span>
+                        <h2>Título del Modal</h2>
+                        <p>Contenido del modal...</p>
+                    </div>
+                </dialog>
             </div>
         </nav>
     </header>
     
     <main>
+        <div class="divRegistro">
         <h2>Registro</h2>
         <form id="registerNewUser">
             <label for="name">Nombre:</label>
@@ -49,6 +60,7 @@
             <input type="submit" value="Regístrate">
         </form>
         <div id="mensajeRegistroCorrecto"></div>
+    </div>
 
 
     </main>

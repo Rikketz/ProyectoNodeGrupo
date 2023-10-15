@@ -52,12 +52,35 @@ document.getElementById("registerNewUser").addEventListener('submit', async (e) 
     document.getElementById('mensajeRegistroCorrecto').textContent=data.message;
 })
 
+document.getElementById("registerNewEmploy").addEventListener('submit', async (e) =>{
+    e.preventDefault();
+    
+    const name = document.getElementById("name").value;
+    const description = document.getElementById("description").value;
+    const salary = document.getElementById("salary").value;
+    const date = document.getElementById("date").value;
+    
+    const response = await fetch("http://localhost:5000/oferta", {
+        method: 'POST',
+        headers:{
+            'Content-Type':'application/json',
+        },
+        body: JSON.stringify({name, description, salary, date}),
+    });
+    
+    const data = await response.json();
+    document.getElementById('mensajeRegistroCorrecto').textContent=data.message;
+})
+
+
 const init = async () => {
     const ofertas = await getOfertas();
     // console.log(ofertas)
     const mappedOfertas = mapOfertas(ofertas);
 
+
     drawOfertas(mappedOfertas)
 }
 
 init()
+

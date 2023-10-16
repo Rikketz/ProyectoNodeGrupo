@@ -5,7 +5,7 @@
 }
 
 .header {
-  height: 70px;
+  height: 8vh;
   width: 100%;
   background-color: rgb(38, 111, 156);
 }
@@ -44,9 +44,19 @@
   flex-direction: row;
   width: 50%;
   justify-content: flex-end;
+  color: white;
 }
 
 #inicioSesion {
+  color: white;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 150px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.Sesion {
   color: white;
   margin-left: 5%;
   margin-right: 5%;
@@ -68,67 +78,38 @@
   text-decoration: underline;
 }
 
-
-.modalPublicarEmpleo {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#modalPublicarEmpleo {
-  top: 50%;
-  left: 50%;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  width: 400px;
-  height: 400px;
-}
-
-#modalPublicarEmpleo::backdrop {
-  background-color: rgba(0, 0, 0, 0.55);
-}
-
-.modalPublicarEmpleo-contenido {
-  background-color: #fff;
-  padding: 20px;
-  border: 1px solid #000;
-  text-align: center;
-  position: relative;
-}
-
-.cerrarPublicarEmpleo {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
+body {
+  min-height: 100vh;
 }
 
 .divRegistro {
+  padding-top: 2%;
   display: flex;
-  flex-direction: column;
   padding-left: 20%;
-  padding-top: 5%;
-  margin-bottom: 20.5%;
+  flex-direction: column;
 }
 
 #registerNewUser {
-  gap: 10px;
   display: flex;
   flex-direction: column;
-  width: 300px;
+  gap: 10px;
+  width: 500px;
+}
+
+#registerNewEmploy {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 500px;
+}
+
+.botonPublicar {
+  width: 200px;
 }
 
 main {
   width: 100%;
-  height: auto;
-  margin-bottom: 20px;
+  min-height: 84vh;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
@@ -175,7 +156,8 @@ dialog {
   width: 800px;
   height: 370px;
   padding: 30px;
-  margin-top: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   border-radius: 10%;
   border-color: black;
   background-color: aliceblue;
@@ -206,7 +188,7 @@ dialog {
 }
 
 footer {
-  height: 70px;
+  height: 8vh;
   width: 100%;
   background-color: rgb(38, 111, 156);
 }

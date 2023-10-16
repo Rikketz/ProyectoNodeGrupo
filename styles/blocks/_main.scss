@@ -1,7 +1,6 @@
 main{
     width: 100%;
-    height: auto;
-    margin-bottom: 20px;
+    min-height: 84vh;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 };
 
@@ -48,7 +47,8 @@ dialog{
     width: 800px;
     height: 370px;
     padding: 30px;
-    margin-top: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     border-radius: 10%;
     border-color: black;
     background-color: aliceblue;

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publica un Empleo</title>
-    <script src="main.js" defer></script>
+    <script src="publishEmploy.js" defer></script>
     <link rel="stylesheet" href="./styles/main/index.css">
 </head>
 <body>
@@ -13,27 +13,17 @@
             <nav class="nav navbar-expand-lg bg-body-tertiary">
                 <div class="navIzquierda">
                     <div class="fotoLogo">
-                        <a href="./index.html"><img class="janosusLogo" src="./styles/base/assets/janosusLogo.png" alt=""></a>
+                        <a href="./index.html"><img class="janosusLogo" src="./styles/base/assets/janosusLogo.png"
+                            alt=""></a>
                     </div>
                     <p class="buscaOfertas">Buscar ofertas</p>
                 </div>
                 <div class="navDerecha">
-                    <p class="inicioSesion">
+                    <span id="inicioSesion">
                         Iniciar Sesión
-                    </p>
-                    <p class="inicioSesion">
-                        <a href="./register.html">Regístrate</a>
-                    </p>
-                    <p class="publicaEmpleo">
-                        <a href="./publishEmploy.html">Publicar Empleo</a>
-                    </p>
-                    <dialog id="modalPublicarEmpleo">
-                        <div class="modalPublicarEmpleo-contenido">
-                            <span id="cerrarModal" class="cerrarPublicarEmpleo">&times;</span>
-                            <h2>Título del Modal</h2>
-                            <p>Contenido del modal...</p>
-                        </div>
-                    </dialog>
+                    </span>
+                    <a class="Sesion" href="./register.html">Regístrate</a>
+                    <a class="publicaEmpleo" href="./publishEmploy.html">Publicar Empleo</a>
                 </div>
             </nav>
         </header>
@@ -56,7 +46,7 @@
                 <input type="text" id="date" name="date" required>
     
     
-                <input type="submit" value="Publicar oferta">
+                <input class="botonPublicar" type="submit" value="Publicar oferta">
             </form>
             <div id="mensajeRegistroCorrecto"></div>
         </div>

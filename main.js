@@ -1,9 +1,4 @@
 const secOfertas = document.querySelector('.secOfertas');
-const inicioSesion = document.querySelector('#inicioSesion');
-const modal = document.querySelector('#modal');
-const cerrarModal = document.querySelector('#btn__inicio')
-
-
 
 const getOfertas = async () => {
     const response = await fetch(`http://localhost:5000/oferta/`);
@@ -43,32 +38,6 @@ const init = async () => {
 }
 
 init()
-
-
-const getLogin = async () => {
-    const response = await fetch(`http://localhost:5000/user/login/`);
-    const users = await response.json();
-
-    return users;
-};
-
-
-document.getElementById("inicioSesion").addEventListener("click", ()=> {
-    document.getElementById("modal").style.display = "block";
-});
-
-document.getElementById("btn__inicio").addEventListener("click", ()=> {
-    document.getElementById("modal").style.display = "none";
-});
-
-window.addEventListener("click", (event)=> {
-    const modal = document.getElementById("modal");
-    if (event.target === modal) {
-    modal.style.display = "none";
-    }
-});
-
-
 
 document.getElementById("registerNewUser").addEventListener('submit', async (e) =>{
     e.preventDefault();

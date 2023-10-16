@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <script src="login.js" defer></script>
+    <link rel="stylesheet" href="./styles/main/index.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav navbar-expand-lg bg-body-tertiary">
+            <div class="navIzquierda">
+                <div class="fotoLogo">
+                    <a href="./index.html"><img class="janosusLogo" src="./styles/base/assets/janosusLogo.png"
+                            alt=""></a>
+                </div>
+                <p class="buscaOfertas">Buscar ofertas</p>
+            </div>
+            <div class="navDerecha">
+                <span id="inicioSesion">
+                    Iniciar Sesión
+                </span>
+                <a class="Sesion" href="./register.html">Regístrate</a>
+                <a class="publicaEmpleo" href="./publishEmploy.html">Publicar Empleo</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="divRegistro">
+            <form id="login">
+                <label for="email">Introduce tu e-mail</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Introduce tu contraseña</label>
+                <input type="password" id="password" name="password" required>
+                <input type="submit" value="Login">
+            </form>
+            <div id="msgLogin"></div>
+        </div>
+    </main>
+
+
+
+    <footer>
+        <section class="footerDivs">
+            <ul class="ulFooter">
+                <li class="listaFooter">Orientación laboral</li>
+                <li class="listaFooter">Ver Empleos</li>
+                <li class="listaFooter">Sueldos</li>
+                <li class="listaFooter">Eventos Janosus</li>
+                <li class="listaFooter">Países</li>
+                <li class="listaFooter">Acerca de</li>
+                <li class="listaFooter">Centro de asistencia</li>
+                <li class="listaFooter">Accesibilidad en Janosus</li>
+                <li class="listaFooter">Centro de privacidad</li>
+                <li class="listaFooter">Cookies</li>
+                <li class="listaFooter">Privacidad</li>
+                <li class="listaFooter">Condiciones</li>
+            </ul>
+        </section>
+    </footer>
+
+</body>
+
+</html>

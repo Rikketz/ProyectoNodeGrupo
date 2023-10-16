@@ -2,6 +2,7 @@
 const Oferta = require("../models/oferta.model")
 const addOferta = async (req, res) => {
     try {
+        console.log("estoy aqui");
         const newOferta = new Oferta(req.body);
         const createdOferta = await newOferta.save();
         return res.status(200).json({ message: "proyecto creado", data: createdOferta })

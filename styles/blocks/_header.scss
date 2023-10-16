@@ -1,0 +1,88 @@
+.header{
+    height: 8vh;
+    width: 100%;
+    background-color: rgb(38, 111, 156);
+}
+.nav{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center
+}
+.navIzquierda{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+.janosusLogo{
+    padding-left: 5%;
+    height: 80%;
+    width: 80%;
+}
+.buscaOfertas{
+    color: white;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 150px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.navDerecha{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: flex-end;
+    color: white;
+}
+#inicioSesion{
+    color: white;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 150px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.Sesion{
+    color: white;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 150px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.publicaEmpleo{
+    color: white;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 150px;
+    font-size: 17px;
+    cursor: pointer;
+}
+.publicaEmpleo:hover{
+    text-decoration: underline;
+}
+body{
+    min-height: 100vh;
+}
+.divRegistro{
+    padding-top: 2%;
+    display: flex;
+    padding-left: 20%;
+    flex-direction: column;
+}
+#registerNewUser{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 500px;
+}
+#registerNewEmploy{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 500px;
+}
+.botonPublicar{
+    width: 200px;
+}

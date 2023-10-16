@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header {
+  height: 8vh;
+  width: 100%;
+  background-color: rgb(38, 111, 156);
+}
+
+.nav {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navIzquierda {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.janosusLogo {
+  padding-left: 5%;
+  height: 80%;
+  width: 80%;
+}
+
+.buscaOfertas {
+  color: white;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 150px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.navDerecha {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: flex-end;
+  color: white;
+}
+
+#inicioSesion {
+  color: white;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 150px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.Sesion {
+  color: white;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 150px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.publicaEmpleo {
+  color: white;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 150px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.publicaEmpleo:hover {
+  text-decoration: underline;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.divRegistro {
+  padding-top: 2%;
+  display: flex;
+  padding-left: 20%;
+  flex-direction: column;
+}
+
+#registerNewUser {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 500px;
+}
+
+#registerNewEmploy {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 500px;
+}
+
+.botonPublicar {
+  width: 200px;
+}
+
+main {
+  width: 100%;
+  min-height: 84vh;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+dialog {
+  width: 20%;
+  height: 15%;
+  padding: 50px;
+  margin: auto;
+  margin-top: 50px;
+  border-style: groove;
+  border-radius: 10%;
+  border-color: rgb(60, 60, 233);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.email {
+  width: 400px;
+  height: 20px;
+}
+
+.password {
+  width: 400px;
+  height: 20px;
+}
+
+#btn__inicio {
+  width: 300px;
+  height: 30px;
+  margin-top: 10px;
+  background-color: rgb(60, 60, 233);
+  color: white;
+}
+
+.secOfertas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.boxOferta {
+  width: 800px;
+  height: 370px;
+  padding: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 10%;
+  border-color: black;
+  background-color: aliceblue;
+  border-style: inset;
+}
+
+.boxOferta h1 {
+  padding: 10px;
+  text-decoration: underline;
+}
+
+.boxOferta h3 {
+  padding: 10px;
+}
+
+.boxOferta p {
+  padding: 10px;
+}
+
+.boxOferta span {
+  padding: 10px;
+  background-color: beige;
+  border-radius: 5%;
+}
+
+.boxOferta h4 {
+  padding: 10px;
+}
+
+footer {
+  height: 8vh;
+  width: 100%;
+  background-color: rgb(38, 111, 156);
+}
+
+.footerDivs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.ulFooter {
+  display: flex;
+  color: white;
+  align-items: center;
+}
+
+.listaFooter {
+  margin: 20px;
+  cursor: pointer;
+}
+
+.listaFooter:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=index.css.map */
